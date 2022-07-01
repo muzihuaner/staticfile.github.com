@@ -9,7 +9,7 @@ function libListCtrl($scope) {
 
     tag = tag || popular;
 
-    return $.getJSON('http://api.staticfile.org/v1/search?q=' + tag).done(function(data) {
+    return $.getJSON('http://sapi.staticfile.org/v1/search?q=' + tag).done(function(data) {
       $scope.$apply(function(){
         $scope.libs = data['libs'];
       });
